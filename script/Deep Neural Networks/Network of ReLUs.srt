@@ -1,0 +1,109 @@
+1
+00:00:00,340 --> 00:00:04,50
+Because we're lazy engineers, we're
+going to take something that works,
+우리는 게으른 엔지니어이기 때문에 작동하는 무언가를 취하고
+
+2
+00:00:04,50 --> 00:00:08,740
+a logistic classifier and do the minimal
+amount of change to make it non-linear.
+로지스틱 분류기를 사용하여 최소한의 변화만으로 비선형으로 만듭니다.
+
+3
+00:00:08,740 --> 00:00:12,320
+We're going to construct our new
+function in the simplest way that we can
+우리는 우리가 생각할 수있는 가장 간단한 방법으로 새로운 기능을 
+
+4
+00:00:12,320 --> 00:00:13,310
+think of.
+구성 할 것입니다.
+
+5
+00:00:13,310 --> 00:00:16,940
+Instead of having a single matrix
+multiplier as our classifier,
+우리의 분류 자로 하나의 행렬 곱셈을하는 대신,
+
+6
+00:00:16,940 --> 00:00:19,780
+we're going to insert
+a RELU right in the middle.
+중간에 RELU를 삽입 할 것입니다.
+
+7
+00:00:19,780 --> 00:00:21,960
+We now have two matrices.
+우리는 이제 두 개의 행렬을가집니다.
+
+8
+00:00:21,960 --> 00:00:24,660
+One going from the inputs to the RELUs,
+and
+하나는 입력에서 RELUs로 가고
+
+9
+00:00:24,660 --> 00:00:27,820
+another one connecting
+the RELUs to the classifier.
+다른 하나는 RELUs를 분류 자로 연결합니다.
+
+10
+00:00:27,820 --> 00:00:29,650
+We've solved two of our problems.
+우리는 두 가지 문제를 해결했습니다.
+
+11
+00:00:29,650 --> 00:00:33,449
+Our function in now nonlinear thanks
+to the RELU in the middle, and
+중간에 RELU 덕분에 우리의 기능은 비선형 적으로 작동합니다
+
+12
+00:00:33,450 --> 00:00:37,000
+we now have a new knob that we can tune,
+this number H which
+우리는 지금 우리가 조정할 수있는 새로운 손잡이를 가지고 있습니다.
+
+13
+00:00:37,000 --> 00:00:40,950
+corresponds to the number of RELU
+units that we have in the classifier.
+이 숫자 H는 분류기에있는 RELU 유닛의 수와 같습니다.
+
+14
+00:00:40,950 --> 00:00:42,860
+We can make it as big as we want.
+우리는 우리가 원하는만큼 크게 만들 수 있습니다.
+
+15
+00:00:42,860 --> 00:00:45,130
+Congratulations, you've built
+your first neural network.
+첫 번째 신경망을 구축 한 것을 축하드립니다.
+
+16
+00:00:46,150 --> 00:00:49,370
+You might ask, wait a minute,
+where's my neuron?
+잠깐, 내 신경은 어디 있니?
+
+17
+00:00:49,370 --> 00:00:53,169
+In the past, when talking about neural
+networks, I remember seeing diagrams
+과거에는 신경에 ​​대해 이야기 할 때 네트워크에서
+
+18
+00:00:53,170 --> 00:00:58,900
+with dendrites, axons, activation
+functions, brains, neuroscience.
+수상 돌기, 축삭, 활성화 기능, 두뇌, 신경 과학이있는 다이어그램을 보았던 것을 기억합니다.
+
+19
+00:00:58,900 --> 00:00:59,500
+Where is all that?
+그게 다 어디 갔지?
+

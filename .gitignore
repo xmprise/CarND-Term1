@@ -1,0 +1,4 @@
+*.p
+*.pickle
+lenet.data-00000-of-00001
+.idea/

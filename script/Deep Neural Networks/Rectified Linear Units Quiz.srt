@@ -1,0 +1,34 @@
+1
+00:00:00,570 --> 00:00:04,550
+Let me introduce you to the lazy
+engineer's favorite non-linear function:
+게으른 엔지니어가 좋아하는 비선형 함수를 소개하겠습니다.
+
+2
+00:00:04,550 --> 00:00:07,60
+the rectified linear units,
+or RELU for short.
+정류 된 선형 유닛, 또는 짧게는 RELU이다.
+
+3
+00:00:08,240 --> 00:00:12,440
+RELUs are literally the simplest
+non-linear functions you can think of.
+RELU는 문자 그대로 생각할 수있는 가장 단순한 비선형 함수입니다.
+
+4
+00:00:12,440 --> 00:00:17,960
+They're linear if x is greater than 0,
+and they're the 0 everywhere else.
+x가 0보다 큰 경우 선형이며, 다른 모든 곳에서는 0입니다.
+
+5
+00:00:17,960 --> 00:00:20,830
+RELUs have nice derivatives, as well.
+RELU에는 멋진 파생 상품도 있습니다.
+
+6
+00:00:20,830 --> 00:00:24,389
+Which of these plots do you think best
+represents the derivative of a RELU?
+다음 중 어느 것이 RELU의 파생물을 가장 잘 대표한다고 생각하십니까?

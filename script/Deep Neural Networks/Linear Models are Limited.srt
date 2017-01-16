@@ -1,0 +1,149 @@
+1
+00:00:00,400 --> 00:00:02,29
+That's the case in general.
+그것은 일반적으로 그렇습니다.
+
+2
+00:00:02,29 --> 00:00:08,940
+If you have N inputs, and K outputs,
+you have (N+1)K parameters to use.
+N 개의 입력과 K 개의 출력을 가지고 있다면,
+사용할 (N + 1) K 개의 매개 변수가 있습니다.
+
+3
+00:00:08,940 --> 00:00:10,10
+Not one more.
+하나도 없어요.
+
+4
+00:00:10,10 --> 00:00:15,50
+The thing is, you might want to use
+many, many more parameters in practice.
+사실, 실제로 더 많은 매개 변수를 사용하는 것이 좋습니다.
+
+5
+00:00:15,50 --> 00:00:16,770
+Also, it's linear.
+또한 선형입니다.
+
+6
+00:00:16,770 --> 00:00:20,310
+This means that the kind of interactions
+that you're capable of representing with
+이것은 당신이 그 모델로 표현할 수있는 상호 작용의 종류가
+
+7
+00:00:20,310 --> 00:00:22,500
+that model is somewhat limited.
+다소 제한된다는 것을 의미합니다.
+
+8
+00:00:22,500 --> 00:00:27,100
+For example, if two inputs
+interact in an additive way,
+예를 들어, 두 입력이 부가적인 방식으로 상호 작용하는 경우,
+
+9
+00:00:27,100 --> 00:00:29,950
+your model can represent them
+well as a matrix multiply.
+여러의 모델은 행렬 곱셈으로 잘 나타낼 수 있습니다.
+
+10
+00:00:29,950 --> 00:00:34,89
+But if two inputs interact in the way
+that the outcome depends on the product
+그러나 두 입력이 상호 작용하는 경우 예를 들어 두 모델의
+
+11
+00:00:34,90 --> 00:00:34,720
+of the two for
+결과에 따라 결과가 
+
+12
+00:00:34,720 --> 00:00:39,260
+example, you won't be able to model
+that efficiently with a linear model.
+달라 지므로 선형 모델로 효율적으로 모델링 할 수 없습니다.
+
+13
+00:00:39,260 --> 00:00:41,790
+Linear operations
+are really nice though.
+선형 작업은 정말 좋습니다.
+
+14
+00:00:41,790 --> 00:00:45,920
+Big matrix multiplies are exactly
+what GPUs were designed for.
+큰 행렬 곱셈은 정확하게 GPU가 설계된 것입니다.
+
+15
+00:00:45,920 --> 00:00:49,260
+They're relatively cheap and
+very, very fast.
+그들은 상대적으로 저렴하고 매우 빠르고 매우 빠릅니다.
+
+16
+00:00:49,260 --> 00:00:52,59
+Numerically linear
+operations are very stable.
+수치 적 선형 연산은 매우 안정적입니다.
+
+17
+00:00:52,60 --> 00:00:56,100
+We can show mathematically that
+small changes in the input
+우리는 수학적으로 입력에 작은 변화가 있음을 보여줄 수 있습니다.
+
+18
+00:00:56,100 --> 00:00:59,560
+can never yield big
+changes in the output.
+출력에서 큰 변화를 결코 가져올 수 없다.
+
+19
+00:00:59,560 --> 00:01:01,630
+The derivates are very nice too.
+미분도 매우 좋습니다.
+
+20
+00:01:01,630 --> 00:01:04,680
+The derivative of a linear
+function is constant.
+선형 함수의 미분은 일정합니다.
+
+21
+00:01:04,680 --> 00:01:08,70
+You can't get more stable
+numerically than a constant.
+상수보다 더 안정적으로 수치를 얻을 수 없습니다.
+
+22
+00:01:08,70 --> 00:01:12,39
+So, we would like to keep our parameters
+inside big linear functions, but
+따라서 우리는 매개 변수를 큰 선형 함수 내부에 유지 하려고 하지만
+23
+00:01:12,40 --> 00:01:15,510
+we would also want the entire
+model to be nonlinear.
+전체 모델이 비선형이기를 원할 것입니다.
+
+24
+00:01:15,510 --> 00:01:19,510
+We can't just keep multiplying
+our inputs by linear functions,
+선형 함수로 입력 값을 계속 곱할 수는 없습니다.
+
+25
+00:01:19,510 --> 00:01:23,60
+because that's just equivalent
+to one big linear function.
+이것은 하나의 큰 선형 함수와 동일하기 때문입니다.
+
+26
+00:01:23,60 --> 00:01:25,395
+So, we're going to have to
+introduce non-linearities.
+그래서 우리는 비선형 성을 도입해야 할 것입니다.
