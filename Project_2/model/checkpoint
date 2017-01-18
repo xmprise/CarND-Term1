@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/wj/CarND-Term1/Project_2/model/lenet.ckpt"
+all_model_checkpoint_paths: "/home/wj/CarND-Term1/Project_2/model/lenet.ckpt"
